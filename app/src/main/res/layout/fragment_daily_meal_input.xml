@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.DailyMealInputFragment"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_10dp"
+    android:paddingBottom="@dimen/dimen_10dp"
+    android:paddingStart="@dimen/dimen_10dp"
+    android:paddingEnd="@dimen/dimen_10dp"
+    android:background="@color/dimmedWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/dimen_10dp">
+
+        <Spinner
+            android:id="@+id/day_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:entries="@array/days"
+            android:background="@drawable/rect_round_lightgrey_10"/>
+
+        <ImageButton
+            android:id="@+id/remove_day_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_remove"
+            android:background="?attr/selectableItemBackground"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/dimen_10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/breakfast"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/dimen_16sp"
+            android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+        <Spinner
+            android:id="@+id/breakfast_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="50dp"
+            android:background="@drawable/rect_round_lightgrey_10"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/dimen_10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lunch"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/dimen_16sp"
+            android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+        <Spinner
+            android:id="@+id/lunch_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="50dp"
+            android:background="@drawable/rect_round_lightgrey_10"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/dinner"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/dimen_16sp"
+            android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+        <Spinner
+            android:id="@+id/dinner_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="50dp"
+            android:background="@drawable/rect_round_lightgrey_10"/>
+
+    </LinearLayout>
+
+</LinearLayout>

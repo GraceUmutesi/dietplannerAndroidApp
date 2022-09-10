@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:id="@+id/rootView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--USERNAME-->
+
+                    <EditText
+                        android:id="@+id/username_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="@dimen/dimen_16dp"
+                        android:layout_marginRight="@dimen/dimen_16dp"
+                        android:layout_marginTop="@dimen/dimen_16dp"
+                        android:hint="Email"
+                        android:layout_marginBottom="@dimen/dimen_15dp"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:background="@drawable/rect_lightgrey"/>
+
+                    <!--PASSWORD-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_16dp"
+                        android:layout_marginRight="@dimen/dimen_16dp"
+                        app:passwordToggleEnabled="true"
+                        android:layout_marginBottom="@dimen/dimen_15dp"
+                        app:hintEnabled="false">
+
+                        <EditText
+                            android:id="@+id/password_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:background="@drawable/rect_lightgrey"
+                            android:paddingLeft="@dimen/dimen_10dp"
+                            android:paddingRight="@dimen/dimen_10dp"
+                            android:hint="Password"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="@dimen/dimen_16dp">
+
+                        <!--LOGIN BUTTON AND PROGRESS-->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/login_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/rect_lightgrey"
+                                android:text="Sign In"
+                                android:visibility="visible"
+                                android:layout_marginRight="@dimen/dimen_5dp"
+                                tools:ignore="RtlHardcoded"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/dimen_16sp" />
+
+                            <include
+                                layout="@layout/progress_layout"
+                                android:visibility="gone"/>
+
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/forgot_pw_btn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="Forgot Password"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:background="@color/transparent"
+                            android:textColor="@color/googleRed"
+                            android:textAllCaps="false"
+                            android:layout_marginStart="@dimen/dimen_10dp"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Or"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/transparentBlack"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dimen_16dp"/>
+
+                    <!--REGISTER OR VERIFY-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/dimen_16dp"
+                        android:layout_marginRight="@dimen/dimen_16dp"
+                        android:layout_marginBottom="@dimen/dimen_16dp">
+
+                        <!--REGISTER-->
+
+                        <Button
+                            android:id="@+id/register_btn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Sign Up"
+                            android:visibility="visible"
+                            android:layout_marginRight="@dimen/dimen_5dp"
+                            tools:ignore="RtlHardcoded"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/dimen_16sp"/>
+
+                        <!--VERIFY-->
+
+<!--                        <Button-->
+<!--                            android:id="@+id/go_to_verify_btn"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:background="@drawable/rect_lightgrey"-->
+<!--                            android:text="@string/verify_account"-->
+<!--                            android:visibility="visible"-->
+<!--                            android:layout_marginLeft="@dimen/dimen_5dp"-->
+<!--                            tools:ignore="RtlHardcoded"-->
+<!--                            style="?android:attr/borderlessButtonStyle"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textSize="@dimen/dimen_16sp"/>-->
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

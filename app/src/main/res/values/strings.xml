@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Diet Planner</string>
+
+    <array name="days">
+        <item>Week Day</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </array>
+
+    <array name="meal_times">
+        <item>Meal Time</item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </array>
+
+    <array name="meal_types">
+        <item>System Generated</item>
+        <item>My Recipes</item>
+    </array>
+
+    <string name="or">Or</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="signin">Sign In</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="profile">Profile</string>
+    <string name="favorite_recipes">Favorite Recipes</string>
+    <string name="no_recipe">No Recipes</string>
+    <string name="nutritional_value">Nutritional Value</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum nulla erat, in egestas tellus vehicula non. Phasellus a nulla quis ipsum faucibus pellentesque a a elit. Praesent porttitor augue velit, at rutrum velit tincidunt ut. Curabitur sed pulvinar nulla. Sed fringilla interdum ligula, et elementum tortor iaculis a. Suspendisse tristique est aliquam mauris interdum viverra. Mauris pulvinar mi non nibh bibendum facilisis. Quisque at lorem quis urna aliquet vestibulum non id eros. Pellentesque id imperdiet felis. Curabitur luctus lacinia ligula vel scelerisque. Suspendisse porta vitae arcu ac consequat. Donec cursus vitae odio ac eleifend. Mauris pharetra tellus arcu, et cursus orci ullamcorper ut. Praesent pharetra pharetra dictum. Aliquam ut placerat lorem. Proin ac dignissim nunc, vitae facilisis purus. Sed sed hendrerit elit. Vivamus luctus imperdiet mi, pharetra accumsan lorem facilisis elementum. Vivamus tempor neque vel sodales fringilla. Duis ultricies turpis nec elit dapibus, in rutrum sem efficitur. Donec mattis mollis risus, sed vehicula quam ultricies laoreet.</string>
+    <string name="directions">Directions</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="no_favorite_recipes">No favorite recipes</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="enter_meal_name">Enter meal name</string>
+    <string name="meal_plan_name">Meal Plan Name</string>
+    <string name="create_meal_plan">Create Meal Plan</string>
+    <string name="add_daily_meal">Add daily meal</string>
+    <string name="no_meal_plans">No Meal Plans</string>
+    <string name="my_meal_plans">My Meal Plans</string>
+    <string name="create_grocery_list">Create Grocery List</string>
+    <string name="view_grocery_list">View Grocery List</string>
+    <string name="enter_recipe_name">Enter Recipe Name</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="choose_recipe_type">Choose Recipe Type</string>
+    <string name="quantity">Quantity</string>
+    <string name="choose_food">Choose food</string>
+    <string name="enter_preparation_directions">Enter Preparation Directions</string>
+    <string name="create_recipe">Create Recipe</string>
+    <string name="select_meal">Select Meal</string>
+    <string name="field_required">Field Required</string>
+    <string name="created_account">Account Created Successfully</string>
+    <string name="cant_reach_server">Can\'t reach server at the moment. Check your internet connection and try again
+    </string>
+    <string name="user_exists">User with this email already exists</string>
+    <string name="bad_request">Bad request</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="invalid_user_text">User with entered credentials is not found.</string>
+    <string name="logout">Logout</string>
+    <string name="retry">Retry</string>
+    <string name="no_recipe_categories_found">No recipe categories found</string>
+    <string name="select_food">Select Food</string>
+    <string name="no_foods_found">No foods found</string>
+    <string name="recipe_created">Recipe created successfully!</string>
+    <string name="estimated_price_for_ingredients">Estimated Price (for ingredients):</string>
+    <string name="no_recipes_found">No recipes found</string>
+    <string name="select_recipe">Select Recipe</string>
+    <string name="delete_meal_plan">Delete Meal Plan</string>
+    <string name="articles">Articles</string>
+</resources>

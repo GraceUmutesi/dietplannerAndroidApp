@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NewMealPlanActivity"
+    android:id="@+id/root_view">
+
+    <include layout="@layout/default_toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_meal_name"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/dark"/>
+
+            <EditText
+                android:id="@+id/meal_plan_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/meal_plan_name"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:background="@drawable/rect_round_lightgrey_10"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_10dp"
+                android:paddingEnd="@dimen/dimen_10dp"
+                android:id="@+id/monday_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MONDAY"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/breakfast"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/mo_breakfast_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lunch"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/mo_lunch_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dinner"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/mo_dinner_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_10dp"
+                android:paddingEnd="@dimen/dimen_10dp"
+                android:id="@+id/tuesday_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TUESDAY"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/breakfast"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/tu_breakfast_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lunch"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/tu_lunch_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dinner"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/tu_dinner_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_10dp"
+                android:paddingEnd="@dimen/dimen_10dp"
+                android:id="@+id/wednesday_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WEDNESDAY"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/breakfast"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/we_breakfast_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lunch"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/we_lunch_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dinner"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/we_dinner_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_10dp"
+                android:paddingEnd="@dimen/dimen_10dp"
+                android:id="@+id/thursday_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="THURSDAY"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/breakfast"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/th_breakfast_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lunch"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/th_lunch_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dinner"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/th_dinner_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_10dp"
+                android:paddingEnd="@dimen/dimen_10dp"
+                android:id="@+id/friday_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FRIDAY"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/breakfast"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/fr_breakfast_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lunch"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/fr_lunch_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dinner"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/fr_dinner_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_10dp"
+                android:paddingEnd="@dimen/dimen_10dp"
+                android:id="@+id/saturday_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SATURDAY"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/breakfast"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/sa_breakfast_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lunch"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/sa_lunch_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dinner"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/sa_dinner_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:paddingStart="@dimen/dimen_10dp"
+                android:paddingEnd="@dimen/dimen_10dp"
+                android:id="@+id/sunday_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUNDAY"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/breakfast"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/su_breakfast_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lunch"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/su_lunch_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dinner"
+                        android:textStyle="bold"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+                    <EditText
+                        android:id="@+id/su_dinner_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add_day_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/round_rect_stroked_primary_10"
+                android:text="@string/add_daily_meal"
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded"
+                style="?android:attr/borderlessButtonStyle"
+                android:textAllCaps="false"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="@dimen/dimen_10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_16dp">
+
+                <Button
+                    android:id="@+id/create_meal_plan_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rect_round_primary_10"
+                    android:text="@string/create_meal_plan"
+                    android:visibility="visible"
+                    tools:ignore="RtlHardcoded"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/dimen_20sp"/>
+
+                <include
+                    layout="@layout/progress_layout"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

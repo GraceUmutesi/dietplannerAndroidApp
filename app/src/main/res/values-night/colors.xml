@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2ecc70</color>
+    <color name="colorPrimaryDark">#239954</color>
+    <color name="colorAccent">#2ecc70</color>
+
+    <color name="dimmedWhite">#0b0a0a</color>
+    <color name="dark">#d3d3d3</color>
+    <color name="transparentBlack">#33000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey">#848484</color>
+    <color name="lightGrey">#2b2b2b</color>
+    <color name="tab_selector">#d1c9c9</color>
+
+    <!--Google colors-->
+    <color name="googleBlue">#4285F4</color>
+    <color name="googleRed">#DB4437</color>
+    <color name="googleGreen">#0F9D58</color>
+    <color name="googleYellow">#F4B400</color>
+</resources>

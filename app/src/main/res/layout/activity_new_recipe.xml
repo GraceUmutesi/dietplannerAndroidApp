@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NewRecipeActivity"
+    android:id="@+id/root_view">
+
+    <include layout="@layout/default_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_recipe_name"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/dark"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/recipe_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/recipe_name"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:background="@drawable/rect_round_lightgrey_10"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_recipe_type"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/dark"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/recipe_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rect_round_lightgrey_10"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Recipe Description"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/dark"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/description_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:background="@drawable/rect_round_lightgrey_10"
+                android:maxLines="4"
+                android:inputType="textMultiLine"
+                android:hint="Description (Optional)"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredients"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/dark"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/ingredients_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/dimen_5dp"
+                    tools:ignore="RtlSymmetry">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/choose_food"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:textColor="@color/dark"/>
+
+                    <EditText
+                        android:id="@+id/food_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/dimen_5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:textColor="@color/dark"/>
+
+                    <EditText
+                        android:id="@+id/food_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:maxLines="1"
+                        android:inputType="numberDecimal"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/approve_food_btn"
+                    android:layout_width="@dimen/dimen_32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_check_circle"
+                    android:layout_marginTop="@dimen/dimen_10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_preparation_directions"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/dark"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/directions_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="5"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:background="@drawable/rect_round_lightgrey_10"
+                android:maxLines="7"
+                android:inputType="textMultiLine"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nutritional Value"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:textSize="@dimen/dimen_16sp"
+                android:textColor="@color/dark"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/nutritional_value_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/dimen_5dp"
+                    tools:ignore="RtlSymmetry">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:textColor="@color/dark"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/nutr_name_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:paddingStart="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/dimen_5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Unit"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:textColor="@color/dark"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/nutr_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:maxLines="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/dimen_5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:textColor="@color/dark"/>
+
+                    <EditText
+                        android:id="@+id/nutr_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:background="@drawable/rect_round_lightgrey_10"
+                        android:maxLines="1"
+                        android:inputType="numberDecimal"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/approve_nutr_btn"
+                    android:layout_width="@dimen/dimen_32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_check_circle"
+                    android:layout_marginTop="@dimen/dimen_10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_16dp">
+
+                <Button
+                    android:id="@+id/create_recipe_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rect_round_primary_10"
+                    android:text="@string/create_recipe"
+                    android:visibility="visible"
+                    tools:ignore="RtlHardcoded"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/dimen_20sp"/>
+
+                <include
+                    layout="@layout/progress_layout"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

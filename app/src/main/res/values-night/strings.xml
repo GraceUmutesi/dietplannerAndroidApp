@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="or">Or</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="signin">Sign In</string>
+    <string name="profile">Profile</string>
+    <string name="favorite_recipes">Favorite Recipes</string>
+    <string name="no_recipe">No Recipes</string>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/ic_arrow_back.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/ic_assignment.xml" value="0.183" />
+        <entry key="app/src/main/res/drawable/ic_check_circle.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/ic_close.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.183" />
+        <entry key="app/src/main/res/drawable/ic_favorite.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/ic_favorite_primary.xml" value="0.2305" />
+        <entry key="app/src/main/res/drawable/ic_remove.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/rect_lightgrey.xml" value="0.2305" />
+        <entry key="app/src/main/res/drawable/rect_round_grey_10.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/rect_round_lightgrey_10.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/rect_round_primary_10.xml" value="0.1645" />
+        <entry key="app/src/main/res/drawable/rect_round_white_stroked_5.xml" value="0.1645" />
+        <entry key="app/src/main/res/drawable/round_rect_primary_15.xml" value="0.1645" />
+        <entry key="app/src/main/res/drawable/round_rect_stroked_15.xml" value="0.1645" />
+        <entry key="app/src/main/res/drawable/round_rect_stroked_primary_10.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/round_rect_stroked_red_10.xml" value="0.2135" />
+        <entry key="app/src/main/res/drawable/step_circle_white.xml" value="0.2135" />
+        <entry key="app/src/main/res/layout/activity_favorites.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_grocery_list.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_meal_plan_details.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_my_meal_plans.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_new_meal_plan.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_new_recipe.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_recipe_details.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/default_toolbar.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/dialog_choose_food.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/dialog_choose_meal.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/fragment_daily_meal_input.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/fragment_meal_planner.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/fragment_recipes.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/fragment_welcome_messages.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/item_daily_meals.xml" value="0.19461517333984368" />
+        <entry key="app/src/main/res/layout/item_groceries.xml" value="0.31768035888671875" />
+        <entry key="app/src/main/res/layout/item_ingredients.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/item_meal_plans.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/item_nutrients.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/item_recipes.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/item_recipes_2.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/progress_layout.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_app_logo.xml" value="0.183" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

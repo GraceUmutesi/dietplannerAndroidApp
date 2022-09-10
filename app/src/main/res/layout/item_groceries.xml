@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="@dimen/dimen_5dp"
+    android:layout_marginStart="@dimen/dimen_5dp"
+    android:layout_marginEnd="@dimen/dimen_5dp"
+    app:cardElevation="1.5dp"
+    android:background="?attr/selectableItemBackground"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp">
+
+        <TextView
+            android:id="@+id/gf_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Large eggs"
+            android:textSize="@dimen/dimen_16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:textSize="@dimen/dimen_16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/gf_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2"
+            android:textSize="@dimen/dimen_16sp"
+            android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+        <TextView
+            android:id="@+id/gf_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="XXXX RWF"
+            android:textSize="@dimen/dimen_16sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

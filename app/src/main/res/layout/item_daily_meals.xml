@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dimen_5dp"
+    android:paddingBottom="@dimen/dimen_5dp">
+
+    <TextView
+        android:id="@+id/day_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="MONDAY"
+        android:textSize="@dimen/dimen_16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/dimen_5dp"
+            app:cardElevation="2.5dp"
+            android:background="?attr/selectableItemBackground"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Breakfast"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:background="@color/black"
+                    android:id="@+id/bf_meal_img"
+                    android:src="@mipmap/ic_app_logo"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/bf_meal_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Hello Sunshine Smoothie"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dimen_5dp"/>
+
+                <TextView
+                    android:id="@+id/bf_meal_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Smoothy"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/bf_delete_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/dimen_5dp"
+            app:cardElevation="2.5dp"
+            android:background="?attr/selectableItemBackground"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lunch"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:background="@color/black"
+                    android:id="@+id/l_meal_img"
+                    android:src="@mipmap/ic_app_logo"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/l_meal_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Hello Sunshine Smoothie"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dimen_5dp"/>
+
+                <TextView
+                    android:id="@+id/l_meal_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Smoothie"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/l_delete_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/dimen_5dp"
+            app:cardElevation="2.5dp"
+            android:background="?attr/selectableItemBackground"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dinner"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:background="@color/black"
+                    android:id="@+id/d_meal_img"
+                    android:src="@mipmap/ic_app_logo"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/d_meal_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Hello Sunshine Smoothie"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dimen_5dp"/>
+
+                <TextView
+                    android:id="@+id/d_meal_cal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Smoothie"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/d_delete_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/dimen_5dp"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

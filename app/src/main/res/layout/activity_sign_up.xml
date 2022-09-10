@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignUp"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:background="@color/white"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:id="@+id/create_account_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--NAME-->
+
+                <EditText
+                    android:id="@+id/first_name_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:hint="First Name"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:background="@drawable/rect_lightgrey"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:layout_marginBottom="@dimen/dimen_15dp"/>
+
+                <EditText
+                    android:id="@+id/last_name_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:hint="Last Name"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:background="@drawable/rect_lightgrey"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:layout_marginBottom="@dimen/dimen_15dp"/>
+
+                <!--PHONE-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/phone_view"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_marginLeft="@dimen/dimen_16dp"-->
+<!--                    android:layout_marginRight="@dimen/dimen_16dp"-->
+<!--                    android:hint="@string/phone_eg_2507xxx"-->
+<!--                    android:layout_marginBottom="@dimen/dimen_15dp"-->
+<!--                    android:paddingLeft="@dimen/dimen_10dp"-->
+<!--                    android:paddingRight="@dimen/dimen_10dp"-->
+<!--                    android:background="@drawable/rect_lightgrey"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:inputType="phone"-->
+<!--                    android:maxLength="13"/>-->
+
+                <!--EMAIL-->
+
+                <EditText
+                    android:id="@+id/email_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:hint="E-mail"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:background="@drawable/rect_lightgrey"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"/>
+
+                <!--PASSWORD-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    app:passwordToggleEnabled="true"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/password_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:background="@drawable/rect_lightgrey"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:hint="Password"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginLeft="@dimen/dimen_16dp"-->
+<!--                    android:layout_marginRight="@dimen/dimen_16dp"-->
+<!--                    android:gravity="center_vertical">-->
+<!--                    <CheckBox-->
+<!--                        android:id="@+id/accept_tos_view"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tos_link"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/i_have_read_and_accept_terms_and_conditions"-->
+<!--                        android:textColor="@color/googleBlue"-->
+<!--                        android:clickable="true"-->
+<!--                        android:focusable="true"/>-->
+<!--                </LinearLayout>-->
+
+                <!--REGISTER BUTTON AND PROGRESS-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:layout_marginBottom="@dimen/dimen_16dp">
+
+                    <Button
+                        android:id="@+id/sign_up_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/signup"
+                        android:visibility="visible"
+                        tools:ignore="RtlHardcoded"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/dimen_16sp"/>
+
+                    <include
+                        layout="@layout/progress_layout"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <!--OR SEPARATOR-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/or"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/transparentBlack"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dimen_16dp"/>
+
+                <!--REGISTER AND FORGOT PASSWORD-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:layout_marginBottom="@dimen/dimen_16dp">
+
+                    <Button
+                        android:id="@+id/go_to_login_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/transparent"
+                        android:text="@string/signin"
+                        android:textColor="@color/colorPrimary"
+                        android:visibility="visible"
+                        tools:ignore="RtlHardcoded"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/dimen_16sp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

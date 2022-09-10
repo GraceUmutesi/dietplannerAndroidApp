@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="rw.dietplanner.dietplanner">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_app_logo_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app_logo_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DietPlanner"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".activities.NewRecipeActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.NewMealPlanActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.GroceryListActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.MealPlanDetailsActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.MyMealPlansActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.FavoritesActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.RecipeDetailsActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.SignUp"
+            android:exported="false"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/LoginTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+    </application>
+
+</manifest>

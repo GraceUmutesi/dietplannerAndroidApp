@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MealPlanDetailsActivity"
+    android:id="@+id/root_view">
+
+    <include layout="@layout/default_toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_10dp">
+
+            <include
+                layout="@layout/progress_layout"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/meal_plan_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_18sp"
+                tools:text="Meal plan name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Added at : "
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/meal_plan_created_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="dd/MMM/yyyy"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/daily_meals_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:visibility="visible"
+                tools:listitem="@layout/item_daily_meals" />
+
+            <Button
+                android:id="@+id/view_grocery_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rect_round_primary_10"
+                android:text="@string/view_grocery_list"
+                android:visibility="visible"
+                tools:ignore="RtlHardcoded"
+                style="?android:attr/borderlessButtonStyle"
+                android:textAllCaps="false"
+                android:textSize="@dimen/dimen_20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/dimen_10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_16dp">
+
+                <Button
+                    android:id="@+id/delete_meal_plan_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/delete_meal_plan"
+                    android:visibility="visible"
+                    tools:ignore="RtlHardcoded"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="@color/googleRed"
+                    android:background="@color/transparent"/>
+
+                <include
+                    layout="@layout/progress_layout"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

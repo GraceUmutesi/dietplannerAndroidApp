@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="2dp"
+        android:id="@+id/food_list_view"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="@drawable/rect_round_grey_10"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Large eggs"
+            android:textSize="@dimen/dimen_16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:textSize="@dimen/dimen_16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2"
+            android:textSize="@dimen/dimen_16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/choose_food_view"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/dimen_10dp">
+
+            <TextView
+                android:id="@+id/food_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Large eggs"
+                android:textSize="@dimen/dimen_18sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="@dimen/dimen_10dp"/>
+
+            <TextView
+                android:id="@+id/food_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROTEINS"
+                android:layout_below="@+id/food_name"/>
+
+            <TextView
+                android:id="@+id/food_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(piece)"
+                android:textSize="@dimen/dimen_16sp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightGrey"/>
+
+    </LinearLayout>
+
+</LinearLayout>
